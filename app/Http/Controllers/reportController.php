@@ -52,8 +52,6 @@ class reportController extends Controller
      */
     public function show(Request $req)
     {
-        
-        
             $req->validate([ 
                 'dateStart' => 'required',
                 'dateEnd' => 'required'
@@ -62,21 +60,31 @@ class reportController extends Controller
             $dateStart = date("Y-m-d H:i:s", strtotime($req->dateStart.' 00:00:00'));
             $dateEnd = date("Y-m-d H:i:s", strtotime($req->dateEnd.' 23:59:59'));
     
-    
             $sales = Orders::whereBetween('updated_at',[$dateStart, $dateEnd])
-                    ->where('payment_status','Paid');
-
-                  
-            dd($sales->sum('amount'));
+                    ->where('payment_status','Paid');              
+        
             return view('report.showReport')
             ->with('dateStart',date("m/d/y H:i:s", strtotime($req->dateStart.' 00:00:00')))
             ->with('dateEnd',date("m/d/y H:i:s", strtotime($req->dateEnd.' 23:59:59')))
-            ->with('totalPrice', $amt)
+           
             ->with('sales',$sales->paginate(5));
-        
-    
     }
 
+    static public function totamt()
+    {
+        $total=0;
+        $dateStart = date("Y-m-d H:i:s", strtotime($req->dateStart.' 00:00:00'));
+        $dateEnd = date("Y-m-d H:i:s", strtotime($req->dateEnd.' 23:59:59'));
+
+        $sales = Orders::whereBetween('updated_at',[$dateStart, $dateEnd])
+                    ->where('payment_status','Paid')->get();
+
+                    foreach($sales as $s)
+                    {
+                        $total=$total+$sales->amount;
+                    }
+            return $total;
+    }
     /**
      * Show the form for editing the specified resource.
      *

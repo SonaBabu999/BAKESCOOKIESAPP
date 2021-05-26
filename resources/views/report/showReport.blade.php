@@ -2,7 +2,10 @@
 
 @section('content')
 
-
+<?php
+use App\Http\Controllers\reportController;
+$tp=reportController::totamt();
+?>
 <div class="container">
 
 <ul class = "breadcrumb">
@@ -36,7 +39,7 @@
         <div class="col-12">
             @if($sales->count() >0)
             <div class="alert alert-success">
-            Sale On Date between {{$dateStart}} and {{$dateEnd}} is {{$amt['tot']}}  Sale Count is {{$sales->total()}}
+            Sale On Date between {{$dateStart}} and {{$dateEnd}} is {{$tp}}  Sale Count is {{$sales->total()}}
 </div>
             @else
 <div class="alert alert-danger">
@@ -70,6 +73,7 @@ No Data Found On  Date between {{$dateStart}} and {{$dateEnd}}
   <!--  <td>{{$s->user_name}}</td> -->
     <td>{{$s->amount}}</td>
 </tr>
+
  
 
 
@@ -79,7 +83,7 @@ No Data Found On  Date between {{$dateStart}} and {{$dateEnd}}
             
             </tbody>
             </table>
-            <input type="button" value='Print' onclick="window.print();" class='btn btn-warning'>
+            <input type="button" value='$tot' onclick="window.print();" class='btn btn-warning'>
 
             {{$sales->appends($_GET)->links()}}
 
