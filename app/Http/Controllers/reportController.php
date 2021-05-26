@@ -66,11 +66,8 @@ class reportController extends Controller
             $sales = Orders::whereBetween('updated_at',[$dateStart, $dateEnd])
                     ->where('payment_status','Paid');
 
-            $amt = Orders::whereBetween('updated_at',[$dateStart, $dateEnd])
-                    ->select(DB::raw('sum(amount) as tot')) 
-                    ->where('payment_status','Paid');
                   
-            dd($amt);
+            dd($sales->sum('amount'));
             return view('report.showReport')
             ->with('dateStart',date("m/d/y H:i:s", strtotime($req->dateStart.' 00:00:00')))
             ->with('dateEnd',date("m/d/y H:i:s", strtotime($req->dateEnd.' 23:59:59')))

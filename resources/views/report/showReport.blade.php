@@ -79,7 +79,7 @@ No Data Found On  Date between {{$dateStart}} and {{$dateEnd}}
             
             </tbody>
             </table>
-
+            <input type="button" value='Print' onclick="window.print();" class='btn btn-warning'>
 
             {{$sales->appends($_GET)->links()}}
 
@@ -87,7 +87,7 @@ No Data Found On  Date between {{$dateStart}} and {{$dateEnd}}
             @csrf
             <input type="hidden" name='dateStart' value='{{$dateStart}}'>
             <input type="hidden" name='dateEnd' value='{{$dateEnd}}'>
-                <input type="submit" value='Convert to Excel' class='btn btn-warning'>
+                
             </form> -->
            
         </div> 
