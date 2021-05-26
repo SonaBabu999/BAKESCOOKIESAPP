@@ -36,7 +36,7 @@
         <div class="col-12">
             @if($sales->count() >0)
             <div class="alert alert-success">
-            Sale On Date between {{$dateStart}} and {{$dateEnd}}   Sale Count is {{$sales->total()}}
+            Sale On Date between {{$dateStart}} and {{$dateEnd}} is {{$amt['tot']}}  Sale Count is {{$sales->total()}}
 </div>
             @else
 <div class="alert alert-danger">
