@@ -176,9 +176,11 @@ class placeorderController extends Controller
         $logid=session::get('login_web_59ba36addc2b2f9401580f014c7f58ea4e30989d');
 
         $amt =DB::table('orders')
+        ->select(DB::raw('SUM(orders.amount)'))
+
         ->where('orders.UserID','=',"$logid")
         ->where('status','pending')
-        ->sum('orders.amount');
+       ->get();
        
      //  dd($amt);
 
