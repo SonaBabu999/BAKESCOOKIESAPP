@@ -50,24 +50,27 @@ class menuController extends Controller
             'cat_id' => 'required'
         ]);
 
-        $imageName = 'noimgfound.jpg';
+//         $imageName = 'noimgfound.jpg';
         
-        if($request->image){
-$request->validate([
-	'image' => 'nullable|file|image|mimes:jpeg,png,jpg|max:5000'
- ]);
+//         if($request->image){
+// $request->validate([
+// 	'image' => 'nullable|file|image|mimes:jpeg,png,jpg|max:5000'
+//  ]);
 
  
-$imageName = date('mdYHis').uniqid().'.'.$request->image->extension();
-$request->image->move(public_path('uploaded_img'),$imageName);
-}
-        
+// $imageName = date('mdYHis').uniqid().'.'.$request->image->extension();
+// $request->image->move(public_path('uploaded_img'),$imageName);
+// }
+  
+$getimage = $request->file('image');
+$name = $getimage->getClientOriginalName();
+$getimage->move(public_path('image/'),$name);      
 
         $mod_menu  = new menuModel;
         $mod_menu->name = $request->name;
         $mod_menu->price = $request->price;
         $mod_menu->description = $request->description;
-        $mod_menu->image = $imageName;
+        $mod_menu->image = $name;
         $mod_menu->cat_id = $request->cat_id;
         $mod_menu->save();
 
@@ -127,32 +130,35 @@ $request->image->move(public_path('uploaded_img'),$imageName);
         ]);
 
   
-        if($request->image){
-            $request->validate([
-                'image' => 'nullable|file|image|mimes:jpeg,png,jpg|max:5000'
-             ]);
+        // if($request->image){
+        //     $request->validate([
+        //         'image' => 'nullable|file|image|mimes:jpeg,png,jpg|max:5000'
+        //      ]);
             
-             if($mod_menu->image != 'noimgfound.jpg'){
-                $imageName = $mod_menu->image;
-                unlink(public_path('uploaded_img').'/'.$imageName);
-             }
+        //      if($mod_menu->image != 'noimgfound.jpg'){
+        //         $imageName = $mod_menu->image;
+        //         unlink(public_path('uploaded_img').'/'.$imageName);
+        //      }
 
 
              
-            $imageName = date('mdYHis').uniqid().'.'.$request->image->extension();
-            $request->image->move(public_path('uploaded_img'),$imageName);
+        //     $imageName = date('mdYHis').uniqid().'.'.$request->image->extension();
+        //     $request->image->move(public_path('uploaded_img'),$imageName);
 
-            }else{
-                $imageName =   $mod_menu->image;
-            }
+        //     }else{
+        //         $imageName =   $mod_menu->image;
+        //     }
 
+            $getimage = $request->file('image');
+            $name = $getimage->getClientOriginalName();
+            $getimage->move(public_path('image/'),$name);
 
 
 
         $mod_menu->name = $request->name;
         $mod_menu->price = $request->price;
         $mod_menu->description = $request->description;
-        $mod_menu->image = $imageName;
+        $mod_menu->image = $name;
         $mod_menu->cat_id = $request->cat_id;
         $mod_menu->save();
 
@@ -174,10 +180,11 @@ $request->image->move(public_path('uploaded_img'),$imageName);
     {
         $mod_menu  = menuModel::find($id);
 
-        if($mod_menu->image != 'noimgfound.jpg'){
-            $imageName = $mod_menu->image;
-            unlink(public_path('uploaded_img').'/'.$imageName);
-         }
+        // if($mod_menu->image != 'noimgfound.jpg'){
+        //     $imageName = $mod_menu->image;
+        //     unlink(public_path('uploaded_img').'/'.$imageName);
+        //  }
+        
 
         $mod_menu->delete();
         session()->flash('status', $mod_menu->name.' Deleted!'); 

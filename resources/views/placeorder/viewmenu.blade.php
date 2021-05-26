@@ -16,7 +16,8 @@
        <div class="row">
        <div class="col-1" ></div>
 <div class="col-3" >
-<img src="{{asset('uploaded_img')}}/{{$m->image}}" height='100' width='100' alt="">
+ <img src="{{URL::asset('image/'.$m->image)}}" height='100' width='100' alt="">
+           
 <p ><strong>{{$m->name}}</strong></p>
     
 </div>
