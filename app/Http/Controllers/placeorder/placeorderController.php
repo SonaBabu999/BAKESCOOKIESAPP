@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Session;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 class placeorderController extends Controller
 {
     /**
