@@ -2,10 +2,7 @@
 
 @section('content')
 
-<?php
-use App\Http\Controllers\reportController;
-$tp=reportController::totamt();
-?>
+
 <div class="container">
 
 <ul class = "breadcrumb">
@@ -39,7 +36,7 @@ $tp=reportController::totamt();
         <div class="col-12">
             @if($sales->count() >0)
             <div class="alert alert-success">
-            Sale On Date between {{$dateStart}} and {{$dateEnd}} is {{$tp}}  Sale Count is {{$sales->total()}}
+            Sale On Date between {{$dateStart}} and {{$dateEnd}} is {{$total}}  Sale Count is {{$sales->total()}}
 </div>
             @else
 <div class="alert alert-danger">

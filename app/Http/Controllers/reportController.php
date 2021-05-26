@@ -61,12 +61,17 @@ class reportController extends Controller
             $dateEnd = date("Y-m-d H:i:s", strtotime($req->dateEnd.' 23:59:59'));
     
             $sales = Orders::whereBetween('updated_at',[$dateStart, $dateEnd])
-                    ->where('payment_status','Paid');              
+                    ->where('payment_status','Paid'); 
+                    
+                    foreach($sales as $s)
+                    {
+                        $total=$total+$sales->amount;
+                    }
         
             return view('report.showReport')
             ->with('dateStart',date("m/d/y H:i:s", strtotime($req->dateStart.' 00:00:00')))
             ->with('dateEnd',date("m/d/y H:i:s", strtotime($req->dateEnd.' 23:59:59')))
-           
+           ->with('total',$total)
             ->with('sales',$sales->paginate(5));
     }
 
@@ -79,10 +84,7 @@ class reportController extends Controller
         $sales = Orders::whereBetween('updated_at',[$dateStart, $dateEnd])
                     ->where('payment_status','Paid')->get();
 
-                    foreach($sales as $s)
-                    {
-                        $total=$total+$sales->amount;
-                    }
+                    
             return $total;
     }
     /**
