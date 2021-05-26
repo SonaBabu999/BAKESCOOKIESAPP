@@ -36,7 +36,7 @@
         <div class="col-12">
             @if($sales->count() >0)
             <div class="alert alert-success">
-            Sale On Date between {{$dateStart}} and {{$dateEnd}} is {{$total}}  Sale Count is {{$sales->total()}}
+            Sale Count On Date between {{$dateStart}} and {{$dateEnd}} is {{$sales->total()}}
 </div>
             @else
 <div class="alert alert-danger">
@@ -80,7 +80,7 @@ No Data Found On  Date between {{$dateStart}} and {{$dateEnd}}
             
             </tbody>
             </table>
-            <input type="button" value='$tot' onclick="window.print();" class='btn btn-warning'>
+            <input type="button" value='Print' onclick="window.print();" class='btn btn-warning'>
 
             {{$sales->appends($_GET)->links()}}
 
