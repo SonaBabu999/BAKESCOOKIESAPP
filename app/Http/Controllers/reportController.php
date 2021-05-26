@@ -64,12 +64,11 @@ class reportController extends Controller
             $sales = Orders::whereBetween('updated_at',[$dateStart, $dateEnd])
                     ->where('payment_status','Paid'); 
                     
-                    foreach($sales as $s)
-                    {
-                        $total=$total+($s->amount);
-                    }
-                    dd($sales);
-                    dd($total);
+                foreach($sales as $s)
+                {
+                    $total=$total+($s->amount);
+                }
+                   
             return view('report.showReport')
             ->with('dateStart',date("m/d/y H:i:s", strtotime($req->dateStart.' 00:00:00')))
             ->with('dateEnd',date("m/d/y H:i:s", strtotime($req->dateEnd.' 23:59:59')))
