@@ -32,6 +32,9 @@ Route::get('/management',function (){
   return view('management.index');
 });
 
+Route::get('/signup','placeorder\placeorderController@createadm');
+Route::post('/ReadAdmin','placeorder\placeorderController@storeadm');
+
 
 
   Route::get('/feedback', function () {
