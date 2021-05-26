@@ -23,8 +23,8 @@ h1, h2, h3, h4, h5, h6 {
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="/login" class="w3-bar-item w3-button">LOGIN</a>
-      <a href="/register" class="w3-bar-item w3-button">REGISTER</a>
+      <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+      
       @if (Route::has('login'))
   <div class="hidden fixed top-0 right-0 px-6 py">
                  
