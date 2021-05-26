@@ -66,7 +66,7 @@ class reportController extends Controller
                     
                     foreach($sales as $s)
                     {
-                        $total=$total+$sales->amount;
+                        $total=$total+$s->amount;
                     }
         
             return view('report.showReport')
