@@ -70,7 +70,7 @@ class reportController extends Controller
                     ->select(DB::raw('sum(amount) as tot')) 
                     ->where('payment_status','Paid');
                   
-            
+            dd($amt);
             return view('report.showReport')
             ->with('dateStart',date("m/d/y H:i:s", strtotime($req->dateStart.' 00:00:00')))
             ->with('dateEnd',date("m/d/y H:i:s", strtotime($req->dateEnd.' 23:59:59')))
