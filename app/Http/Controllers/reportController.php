@@ -70,7 +70,7 @@ class reportController extends Controller
             ->with('sales',$sales->paginate(5));
     }
 
-    static public function totamt()
+    static public function totamt(Request $req)
     {
         $total=0;
         $dateStart = date("Y-m-d H:i:s", strtotime($req->dateStart.' 00:00:00'));
