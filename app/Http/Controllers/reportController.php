@@ -57,6 +57,7 @@ class reportController extends Controller
                 'dateEnd' => 'required'
             ]);
     
+            $total=0;
             $dateStart = date("Y-m-d H:i:s", strtotime($req->dateStart.' 00:00:00'));
             $dateEnd = date("Y-m-d H:i:s", strtotime($req->dateEnd.' 23:59:59'));
     
@@ -77,7 +78,7 @@ class reportController extends Controller
 
     static public function totamt(Request $req)
     {
-        $total=0;
+       
         $dateStart = date("Y-m-d H:i:s", strtotime($req->dateStart.' 00:00:00'));
         $dateEnd = date("Y-m-d H:i:s", strtotime($req->dateEnd.' 23:59:59'));
 
