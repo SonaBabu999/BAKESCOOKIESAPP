@@ -12,11 +12,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color: rgb(5, 174, 180);">
+<body >
 
-<div class="container">
-<div class="row">
-        <div class="card-body" >
+
 <nav class="navbar navbar-expand-md bg-warning navbar-light">
 
 
@@ -44,7 +42,9 @@
                   
                @else
                <li class="nav-item">
-               &nbsp;&nbsp;<a  button type="button" class="btn btn-success" class="nav-link" href="{{ route('login') }}" class="text-sm text-gray-700 underline"><B>LOGIN</B></button></a>
+               &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;<a  button type="button" class="btn btn-success" class="nav-link" href="{{ route('login') }}" class="text-sm text-gray-700 underline"><B>LOGIN</B></button></a>
                 
                    </li> 
                  
@@ -62,10 +62,7 @@
  
            </div>
        @endif
-       <div class="clearfix">
-  <div class="spinner-border float-right" role="status">
-    <span class="sr-only">Loading...</span>
-  </div>
+      
 </div>
     </div>
 </div>
@@ -78,7 +75,7 @@
     <div class="carousel-item active">
     <!-- <img height='550px'src="https://media-cdn.tripadvisor.com/media/photo-s/04/67/d4/43/chino-cafe-gallery.jpg" class="d-block w-100" alt="...">
      -->
-    <img height='550px'src="https://i.pinimg.com/originals/46/cb/36/46cb36afedf1dc9e616ae4614e064fda.jpg" class="d-block w-100" alt="...">
+    <img height='900px'src="https://i.pinimg.com/originals/46/cb/36/46cb36afedf1dc9e616ae4614e064fda.jpg" class="d-block w-100" alt="...">
   
    
     </div>
@@ -86,12 +83,6 @@
    
   </div>
 </div>
-
-<div class="card-footer">
-        
-        </div>
-    </div>
-
 
         </div>
     </div>
