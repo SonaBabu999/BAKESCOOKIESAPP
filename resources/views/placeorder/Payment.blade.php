@@ -85,7 +85,7 @@
                                 <div class="form-inline">
                                     <div class="input-group">
                                         <div class="input-group-prepend"><span class="input-group-text">Rs.</span></div>
-                                        <input type="text" name="payamt" class="form-control text-right" id="exampleInputAmount" value="{{$amt}}" >
+                                        <input type="text" name="payamt" class="form-control text-right" id="exampleInputAmount"  placeholder="X X X X">
                                         <div class="input-group-append"><span class="input-group-text">.00</span></div>
                                     </div>
                                 </div>
