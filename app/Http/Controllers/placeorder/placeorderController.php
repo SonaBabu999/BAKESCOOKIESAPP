@@ -172,10 +172,15 @@ class placeorderController extends Controller
 
     public function custpay()
     {
-      
+        $logid=session::get('login_web_59ba36addc2b2f9401580f014c7f58ea4e30989d');
+        $amt = DB::table('orders')
+            ->select('amount')
+            ->where('orders.UserID','=',"$logid")
+            ->where('orders.status','like',"pending")
+            ->get();
      
 
-        return view('placeorder.Payment');
+        return view('placeorder.Payment')->with('amt',$amt);
     }
     public function cpayportal()
     {
