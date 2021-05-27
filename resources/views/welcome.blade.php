@@ -216,7 +216,7 @@ Try our Standard Order Menu to find cake variants and our other products. You wi
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
-  <p>Powered by <a href="/login" title="W3.CSS" target="_blank" class="w3-hover-text-green">honest@bakers</a></p>
+  <p>Powered by <a href="#" title="W3.CSS" target="_blank" class="w3-hover-text-green">honest@bakers</a></p>
 </footer>
  
 <script>
