@@ -15,40 +15,37 @@ use App\Http\Controller\placeorder\feedbackController;
 |
 */
 
-Route::get('/', function () {
+    Route::get('/', function () {
     return view('welcome');
-});
-Auth::routes(['reset'=> false]);
-Route::get('/home', 'HomeController@index')->name('home');
+    });
 
- 
-// Route::group(['middleware' => 'prevent-back-history'],function(){
+    Auth::routes(['reset'=> false]);
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::get('/signup','placeorder\placeorderController@createadm');
+    Route::post('/ReadAdmin','placeorder\placeorderController@storeadm');
+
+    Route::group(['middleware' => 'prevent-back-history'],function(){
 	
-  Auth::routes();
-	Route::get('/home', 'HomeController@index');
+    Auth::routes();
+	  Route::get('/home', 'HomeController@index');
+
+    Route::get('/management',function (){
+     return view('management.index');
+    });
 
 
-Route::get('/management',function (){
-  return view('management.index');
-});
-
-Route::get('/signup','placeorder\placeorderController@createadm');
-Route::post('/ReadAdmin','placeorder\placeorderController@storeadm');
-
-
-
-  Route::get('/feedback', function () {
+    Route::get('/feedback', function () {
     return redirect('management');
-  });
-  Route::get('/management', function () {
+    });
+    Route::get('/management', function () {
     return view('home');
-  });
-  Route::get('/management', function () {
+    });
+    Route::get('/management', function () {
     return redirect('home');
-  });
+    });
 
 Route::resource('/management/category', 'management\categoryController');
-
 Route::resource('/management/menu', 'management\menuController');
 Route::get('/feedback', 'management\feedbackController@create');
 Route::get('/management/feedback', 'management\feedbackController@index');
@@ -60,12 +57,10 @@ Route::post('/add_to_cart','placeorder\placeorderController@addToCart');
 Route::get('/cartlist','placeorder\placeorderController@cartList');
 Route::get('/removecart/{id}','placeorder\placeorderController@removeCart');
 Route::get('/ordernow','placeorder\placeorderController@orderNow');
-Route::post('/orderplace','placeorder\placeorderController@orderPlace');
-       
+Route::post('/orderplace','placeorder\placeorderController@orderPlace');     
 Route::get('/payment','placeorder\placeorderController@custpay');
 Route::post('/paymentportal','placeorder\placeorderController@cpayportal');
-Route::get('/paysuccess','placeorder\placeorderController@psuccess');
-      
+Route::get('/paysuccess','placeorder\placeorderController@psuccess');     
 Route::get('/placeorder', 'placeorder\placeorderController@index');
 Route::get('/placeorder/getMenuFromCategory/{cat_id}', 'placeorder\placeorderController@getMenuFromCategory');
   
@@ -74,7 +69,7 @@ Route::get('/report/show', 'reportController@show');
 Route::get('/report/show/excel', 'reportController@export');
     
 Route::get('/management/bookings', 'reportController@viewb'); 
-// });
+ });
 
 
 
