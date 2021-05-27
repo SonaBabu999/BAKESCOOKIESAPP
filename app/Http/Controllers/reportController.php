@@ -57,17 +57,14 @@ class reportController extends Controller
                 'dateEnd' => 'required'
             ]);
     
-            $total=0;
+           
             $dateStart = date("Y-m-d H:i:s", strtotime($req->dateStart.' 00:00:00'));
             $dateEnd = date("Y-m-d H:i:s", strtotime($req->dateEnd.' 23:59:59'));
     
             $sales = Orders::whereBetween('updated_at',[$dateStart, $dateEnd])
-                    ->where('payment_status','Paid'); 
+                    ->where('payment_status','Paid')->get(); 
                     
-                foreach($sales as $s)
-                {
-                    $total=$total+($s->amount);
-                }
+                
                    
             return view('report.showReport')
             ->with('dateStart',date("m/d/y H:i:s", strtotime($req->dateStart.' 00:00:00')))

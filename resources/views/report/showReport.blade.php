@@ -34,16 +34,10 @@
         @csrf
         <div class="row"> 
         <div class="col-12">
-            @if($sales->count() >0)
-            <div class="alert alert-success">
-            Sale Count On Date between {{$dateStart}} and {{$dateEnd}} is {{$sales->total()}}
-</div>
-            @else
-<div class="alert alert-danger">
-No Data Found On  Date between {{$dateStart}} and {{$dateEnd}} 
-</div>
-            @endif   
+             
 
+            
+                          
 
 
             <table class="myclass">
@@ -61,20 +55,34 @@ No Data Found On  Date between {{$dateStart}} and {{$dateEnd}}
             @php
             $countSale = ($sales->currentPage()-1) * $sales->perPage() +1;
                 @endphp
+
+                @php
+                    $amount=0;
+                    $count=0;
+                @endphp                
 @foreach($sales as $s)
 <tr >
    <!-- <td>{{$countSale++}}</td>-->
     <td>{{$s->id}}</td>
     <td>{{$s->updated_at}}</td>
-  
   <!--  <td>{{$s->user_name}}</td> -->
     <td>{{$s->amount}}</td>
 </tr>
+@php
+    $amount=$amount+$s->amount;
+    $count=$count+1;
+@endphp
+@endforeach 
 
- 
-
-
-@endforeach
+@if($sales->count() >0)
+            <div class="alert alert-success">
+            Sale Count On Date between {{$dateStart}} and {{$dateEnd}} is {{$amount}} {{$count}}
+</div>
+            @else
+<div class="alert alert-danger">
+No Data Found On  Date between {{$dateStart}} and {{$dateEnd}} 
+</div>
+            @endif 
 
 
             
