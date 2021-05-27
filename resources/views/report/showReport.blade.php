@@ -73,7 +73,7 @@
 
 @if($sales->count() >0)
             <div class="alert alert-success">
-            Sale Count On Date between {{$dateStart}} and {{$dateEnd}} is {{$amount}} {{$count}}
+            Sales On Date between {{$dateStart}} and {{$dateEnd}} is {{$amount}} and Sale Count is {{$count}}
 </div>
             @else
 <div class="alert alert-danger">
