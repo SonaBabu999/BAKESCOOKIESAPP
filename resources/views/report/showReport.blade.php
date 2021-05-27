@@ -52,10 +52,7 @@
                 </tr>    
                 </thead>
             <tbody>
-            <!-- @php
-            $countSale = ($sales->currentPage()-1) * $sales->perPage() +1;
-                @endphp -->
-
+          
                 @php
                     $amount=0;
                     $count=0;
