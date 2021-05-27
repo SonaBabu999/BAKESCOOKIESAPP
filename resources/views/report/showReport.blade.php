@@ -52,9 +52,9 @@
                 </tr>    
                 </thead>
             <tbody>
-            @php
+            <!-- @php
             $countSale = ($sales->currentPage()-1) * $sales->perPage() +1;
-                @endphp
+                @endphp -->
 
                 @php
                     $amount=0;
@@ -91,7 +91,7 @@ No Data Found On  Date between {{$dateStart}} and {{$dateEnd}}
             <div style="text-align:center;"><br>
             <input type="button" value='Print' onclick="window.print();" class='btn btn-warning'>
             </div>
-            {{$sales->appends($_GET)->links()}}
+            <!-- {{$sales->appends($_GET)->links()}} -->
 
             <!-- <form action="/report/show/excel" method='get'>
             @csrf
