@@ -59,10 +59,10 @@
                 @endphp                
 @foreach($sales as $s)
 <tr >
-   <!-- <td>{{$countSale++}}</td>-->
+   
     <td>{{$s->id}}</td>
     <td>{{$s->updated_at}}</td>
-  <!--  <td>{{$s->user_name}}</td> -->
+  
     <td>{{$s->amount}}</td>
 </tr>
 @php
@@ -88,14 +88,7 @@ No Data Found On  Date between {{$dateStart}} and {{$dateEnd}}
             <div style="text-align:center;"><br>
             <input type="button" value='Print' onclick="window.print();" class='btn btn-warning'>
             </div>
-            <!-- {{$sales->appends($_GET)->links()}} -->
-
-            <!-- <form action="/report/show/excel" method='get'>
-            @csrf
-            <input type="hidden" name='dateStart' value='{{$dateStart}}'>
-            <input type="hidden" name='dateEnd' value='{{$dateEnd}}'>
-                
-            </form> -->
+           
            
         </div> 
         </div>
