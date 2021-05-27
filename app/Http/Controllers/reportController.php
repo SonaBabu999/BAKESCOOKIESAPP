@@ -69,7 +69,7 @@ class reportController extends Controller
             return view('report.showReport')
             ->with('dateStart',date("m/d/y H:i:s", strtotime($req->dateStart.' 00:00:00')))
             ->with('dateEnd',date("m/d/y H:i:s", strtotime($req->dateEnd.' 23:59:59')))
-           ->with('total',$total)
+        //    ->with('total',$total)
             ->with('sales',$sales->paginate(5));
     }
 
