@@ -17,13 +17,13 @@ $total=placeorderController::cartItem();
         <h4>Place Orders  </h4>
       
         
-        <a href="/cartlist" class='btn btn-success float-right'>Cart({{$total}})</a>
+        <a href="/cartlist" class='btn btn-primary float-right'>Cart({{$total}})</a>
         
         </div>
         <div class="card-body">
       
         <h2 style="text-align:center;"><U><B>CATEGORIES</U></B></h2><br>
-        <nav class="navbar navbar-expand-sm bg-warning ">
+        <nav class="navbar navbar-expand-sm bg-info">
   <ul class="navbar-nav">
        @foreach($categories as $cat)
        <li class="nav-item">

@@ -86,7 +86,7 @@ No Data Found On  Date between {{$dateStart}} and {{$dateEnd}}
             </tbody>
             </table>
             <div style="text-align:center;"><br>
-            <input type="button" value='Print' onclick="window.print();" class='btn btn-warning'>
+            <input type="button" value='Print' onclick="window.print();" class='btn btn-primary'>
             </div>
            
            

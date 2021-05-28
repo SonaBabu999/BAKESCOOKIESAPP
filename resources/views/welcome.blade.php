@@ -18,7 +18,8 @@ body, html {
 .bgimg-1 {
   background-position: center;
   background-size: cover;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7DYuugZdeiUv3B3LGgslln6oKZfDW6QtSTQ&usqp=CAU");
+  background-image: url("https://image.freepik.com/free-photo/coffee-with-croissant_151341-75.jpg");
+  filter: contrast(100%);
   min-height: 100%;
 }
 
@@ -61,8 +62,8 @@ body, html {
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-white" style="padding:48px">
     <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-    <span class="w3-large"> <h3>Our Mission</h3></span>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium"><b>Start something that matters</b></span><br>
+    <span class="w3-large"> <h3><b>Our Mission</h3></b></span>
    <p><i>Our Mission is to provide quality, 100 % fresh and widest range of products to all our customers. Honest Bakers aims to offer high-quality fresh and widest range of design cakes and confectionary products at a competitive price to meet the demand of the all-income classes.
  We believe in customer satisfaction.</i></p>
     <span class="w3-large">Count Memmories...Not Calories!!!</span>
@@ -137,7 +138,7 @@ Try our Standard Order Menu to find cake variants and our other products. You wi
       <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Menu</a></p>
     </div>
     <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="https://data.whicdn.com/images/352314441/original.jpg"alt="Buildings" width="700" height="394">
+      <img class="w3-image w3-round-large" src="https://images.unsplash.com/photo-1587080413959-06b859fb107d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTEwfHxDb2ZlZSUyMGN1cCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"alt="Buildings" width="700" height="394">
     </div>
   </div>
 </div>
@@ -176,7 +177,7 @@ Try our Standard Order Menu to find cake variants and our other products. You wi
       <img height='300px'  src="https://www.modernhoney.com/wp-content/uploads/2021/01/Strawberries-and-Cream-Smoothie-10-scaled.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
     </div>
     <div class="w3-col l3 m6">
-      <img height='300px'src="https://dulciabakerydotcom.files.wordpress.com/2016/01/img_7280_borde-e1453782658942.png?w=640" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
+      <img height='300px'src="https://images.unsplash.com/photo-1601409751311-cbecfe223af4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTd8fGN1cGNha2UlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
     </div>
   </div>
 </div>

@@ -1,5 +1,7 @@
 body{
-    background-color:#C70039 ;
+  
+    background-image: url("https://images.unsplash.com/photo-1571032555647-37380b4bdfe5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fHNvbGlkJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
+
     }
     a{
         color: rgb(24, 23, 24);
@@ -7,6 +9,8 @@ body{
         display:inline-block;
     }
     img{
+        
+        
         display: block;
     }
     

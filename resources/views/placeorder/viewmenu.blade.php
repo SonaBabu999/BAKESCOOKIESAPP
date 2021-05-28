@@ -31,7 +31,7 @@
 <form action="/add_to_cart" method="POST">
     @csrf
     <input type="hidden" name="ItemID" value="{{ $m->id }}">
-    <button type="submit" class="btn btn-success">Add to cart</button>
+    <button type="submit" class="btn btn-primary">Add to cart</button>
     </form>
 </div>
 </div>

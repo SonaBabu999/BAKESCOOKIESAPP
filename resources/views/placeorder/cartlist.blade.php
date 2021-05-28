@@ -30,7 +30,7 @@
 
 </div>
 <div class="col-4">
-<a href="/removecart/{{$m->cartid}}" class="btn btn-success">Remove from cart</a>
+<a href="/removecart/{{$m->cartid}}" class="btn btn-primary">Remove from cart</a>
 </div>
 </div>
   
@@ -38,8 +38,8 @@
         @endforeach
         </div >
         <div style="text-align:center;">
-        <br><br><a class="btn btn-success" href="/placeorder">Go Back</a>
-        <a class="btn btn-success" href="/ordernow">Order Now</a>
+        <br><br><a class="btn btn-primary" href="/placeorder">Go Back</a>
+        <a class="btn btn-primary" href="/ordernow">Order Now</a>
         </div>
         </div>
         <div class="card-footer">
