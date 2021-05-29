@@ -29,7 +29,7 @@
         @endforeach
         </tbody>
 
-</table>  -->
+</table>  
         </div >
         <div style="text-align:center;">
         <br><br><a class="btn btn-primary" href="/placeorder">Go Back</a>
