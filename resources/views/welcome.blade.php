@@ -19,7 +19,7 @@ body, html {
   background-position: center;
   background-size: cover;
   background-image: url("https://images.unsplash.com/photo-1615398439756-37600790e8d4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGZvb2QlMjBib3dsJTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
-  filter: contrast(150%);
+  filter: contrast(200%);
   min-height: 100%;
 }
 
