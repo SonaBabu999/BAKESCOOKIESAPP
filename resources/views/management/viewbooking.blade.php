@@ -15,7 +15,8 @@
         <div class="card-header">
         <h2 style="text-align:center;"><U><B>CUSTOMER PAID BOOKINGS</U></B></h2><br>
        </div>
-        <div class="card-body">
+        <div class="card-body" style="
+    overflow: auto;">
         @if (session('status'))
     <div class="alert alert-success alert-dismissible" >
     <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -28,12 +29,12 @@
 <table class="table">
     <thead>
         <tr>
-            <td>OrderId</td>
-            <td>UserId</td>
-            <td>ItemId</td>
-            <td>PaymentMethod</td>            
-            <td>Address</td> 
-            <td>Amount</td> 
+            <td><b>Id</b></td>
+            <td><b>UserId</b></td>
+            <td><b>ItemId</b></td>
+            <td><b>PaymentMethod</b></td>            
+            <td><b>Address</b></td> 
+            <td><b>Amount</b></td> 
         </tr>
     </thead>
     <tbody>

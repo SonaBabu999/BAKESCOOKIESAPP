@@ -1,7 +1,9 @@
 body{
-  
-    background-image: url("https://images.unsplash.com/photo-1571032555647-37380b4bdfe5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fHNvbGlkJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("https://images.unsplash.com/photo-1615398439756-37600790e8d4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGZvb2QlMjBib3dsJTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
+    height: auto;
     }
     a{
         color: rgb(24, 23, 24);

@@ -11,31 +11,25 @@
         
         
         </div>
-        <div class="card-body">
+        <div class="card-body" style="
+    overflow: auto;" >
         <h2 style="text-align:center;"><U><B>CART</U></B></h2><br>
-       
+        <table class="table">
+    <tbody>
+   
         @foreach($menuitm as $m)
-        <div class="row">
-       <div class="col-1" ></div>
-<div class="col-3" >
-<img src="{{URL::asset('image/'.$m->image)}}" height='100' width='100' alt="">
+          <tr>
+           <td><img src="{{URL::asset('image/'.$m->image)}}" height='100' width='100' alt="">
            
-<p ><strong>{{$m->name}}</strong></p>
-    
-</div>
-<div class="col-4">
-
-{{$m->description}}<br>
-<strong>Price: {{$m->price}}</strong> 
-
-</div>
-<div class="col-4">
-<a href="/removecart/{{$m->cartid}}" class="btn btn-primary">Remove from cart</a>
-</div>
-</div>
-  
-        
+<p ><strong>{{$m->name}}</strong></p></td>
+           <td>{{$m->description}}<br>
+<strong>Price: {{$m->price}}</strong> </td>
+           <td><a href="/removecart/{{$m->cartid}}" class="btn btn-primary">Remove from cart</a></td>
+       </tr>
         @endforeach
+        </tbody>
+
+</table>  -->
         </div >
         <div style="text-align:center;">
         <br><br><a class="btn btn-primary" href="/placeorder">Go Back</a>

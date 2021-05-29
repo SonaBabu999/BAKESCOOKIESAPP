@@ -16,7 +16,8 @@
         <h4>Create Menu</h4>
         <a href="/management/menu/create" class='btn btn-primary float-right'>Create Menu</a>
         </div>
-        <div class="card-body">
+        <div class="card-body" style="
+    overflow: auto;">
         @if (session('status'))
     <div class="alert alert-success alert-dismissible" >
     <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -28,14 +29,14 @@
 <table class="table">
     <thead>
         <tr>
-            <td>id</td>
-            <td>Name</td>
-            <td>Price</td>
-            <td>Image</td>
-            <td>Description</td> 
-            <td>Category</td> 
-            <td>Edit</td>
-            <td>Delete</td>
+            <td><b>id</b></td>
+            <td><b>Name</b></td>
+            <td><b>Price</b></td>
+            <td><b>Image</b></td>
+            <td><b>Description</b></td> 
+            <td><b>Category</b></td> 
+            <td><b>Edit</b></td>
+            <td><b>Delete</b></td>
         </tr>
     </thead>
     <tbody>

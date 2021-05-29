@@ -19,7 +19,16 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
- 
+    <style>
+    .bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://images.unsplash.com/photo-1571032555647-37380b4bdfe5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fHNvbGlkJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
+  filter: contrast(150%);
+  min-height: 100%;
+}
+</style>
+
 
 </head>
  

@@ -18,8 +18,8 @@ body, html {
 .bgimg-1 {
   background-position: center;
   background-size: cover;
-  background-image: url("https://image.freepik.com/free-photo/coffee-with-croissant_151341-75.jpg");
-  filter: contrast(100%);
+  background-image: url("https://images.unsplash.com/photo-1615398439756-37600790e8d4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGZvb2QlMjBib3dsJTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
+  filter: contrast(150%);
   min-height: 100%;
 }
 
@@ -60,7 +60,7 @@ body, html {
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
+  <div class="w3-display-left w3-text-black" style="padding:48px">
     <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium"><b>Start something that matters</b></span><br>
     <span class="w3-large"> <h3><b>Our Mission</h3></b></span>

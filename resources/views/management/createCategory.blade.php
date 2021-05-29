@@ -26,13 +26,14 @@
 @endif
  
 
-<table class="table">
+<table class="table" style="
+    overflow: auto;">
     <thead>
         <tr>
-            <td>id</td>
-            <td>Name</td>
-            <td>Edit</td>
-            <td>Delete</td>
+            <td><b>id</b></td>
+            <td><b>Name</b></td>
+            <td><b>Edit</b></td>
+            <td><b>Delete</b></td>
         </tr>
     </thead>
     <tbody>

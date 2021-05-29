@@ -15,7 +15,8 @@
         <div class="card-header">
         <h2 style="text-align:center;"><U><B>CUSTOMER FEEDBACKS</U></B></h2><br>
        </div>
-        <div class="card-body">
+        <div class="card-body" style="
+    overflow: auto;">
         @if (session('status'))
     <div class="alert alert-success alert-dismissible" >
     <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -28,10 +29,10 @@
 <table class="table">
     <thead>
         <tr>
-            <td>id</td>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Message</td>
+            <td><b>id</b></td>
+            <td><b>Name</b></td>
+            <td><b>Email</b></td>
+            <td><b>Message</b></td>
             <!-- <td>Edit</td>
             <td>Delete</td> -->
         </tr>
