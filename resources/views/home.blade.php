@@ -22,11 +22,15 @@
     Management</a>
     </div>
     @endif
+
+    @if(!(Auth::user()->checkAdmin()))
     <div class="col-sm-4">
     <a href="/placeorder">
     <img src="{{asset('image/cash.png')}}" height="100" width="100">
     Place Orders</a>
     </div>
+    @endif
+
     @if(!(Auth::user()->checkAdmin()))
                         <div class="col-sm-4">
                         <a href="/feedback">  <img src="{{asset('image/report.png')}}" height="100" width="100">
