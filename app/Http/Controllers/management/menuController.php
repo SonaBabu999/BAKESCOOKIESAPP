@@ -20,7 +20,7 @@ class menuController extends Controller
     public function index()
     {
          $menus = menuModel::all();
-         dd($menus);
+        // dd($menus);
         return view('management.menu')->with('menus',$menus);
     }
 
